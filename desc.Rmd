@@ -2,7 +2,7 @@
 title: "Как работает парсер с pogodaiklimat.ru"
 author: "Всеволод Морейдо"
 date: '8 сентября 2020 г '
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
