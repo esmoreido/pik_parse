@@ -1,0 +1,1 @@
+This is a pogodaiklimat silent parser.
