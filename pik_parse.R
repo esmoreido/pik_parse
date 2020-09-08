@@ -66,20 +66,19 @@ for(i in stations_pik){
   save(all_df, file = 'pik_sochi_large.RData')
 }
 summary(all_df)
-# all_df <- subset(all_df, subset = index != 30317)
-# df <- read_xlsx(path = 'pik_bratskoe_archive.xlsx')
+save(all_df, file = 'all_df.RData')
+write_xlsx(x = all_df, col_names = T, path = 'pik_out_3h.xlsx')
 
 all_df$index <- as.factor(all_df$index)
 
-
 p4 <- ggplot(melt(all_df, id.vars = c('index', 'date')), aes(x=index, y=value, col=index)) +
-  geom_boxplot() +
+  stat_boxplot() +
   facet_grid(.~variable, scales = 'free_x', 
              labeller = as_labeller(c('temp'=' Температура', 'prec'='Осадки', 'td'='Точка росы'))) + 
-  coord_flip() +
+  coord_flip() + theme_light(base_size = 20) +
   labs(title='Распределение', x='Станция', y='Значение', col='Индекс')
 p4
-ggsave(plot = p4, filename = "pik_boxplot_2020.png", width = 16, height = 12, dpi = 300, device = 'png', limitsize = F)
+ggsave(plot = p4, filename = "pik_boxplot_2020.png", width = 12, height = 8, dpi = 300, device = 'png', limitsize = F)
 
 pik_daily <- all_df %>%
   dplyr::group_by(day = as.Date(date), index) %>%
@@ -88,7 +87,7 @@ pik_daily <- all_df %>%
                    av_td = mean(td, na.rm = T))
 summary(pik_daily)
 
-write_xlsx(x = pik_clear, col_names = T, path = 'st20_2020.xlsx')
+write_xlsx(x = pik_daily, col_names = T, path = 'pik_out_daily.xlsx')
 
 pik_daily %>%
   reshape2::melt(id.vars=c('day', 'index')) %>%
