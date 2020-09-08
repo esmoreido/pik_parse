@@ -3,30 +3,12 @@
 Всеволод Морейдо
 8 сентября 2020 г
 
-R Markdown
-----------
+Скачать срочные (3 ч) данные (T, R, Td) с метеостанций в России и мире теперь проще
+-----------------------------------------------------------------------------------
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Все, что вам нужно - номера метеостанций и даты. Если в архиве ("Погоды и климата")\[<http://pogodaiklimat.ru>\] есть информация по этим станциям за эти даты, вы получите xlsx файлы со срочными и суточными значениями.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Пример
+------
 
-``` r
-summary(cars)
-```
-
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
-
-Including Plots
----------------
-
-You can also embed plots, for example:
-
-![](desc_files/figure-markdown_github/pressure-1.png)
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+![](pik_boxplot_2020.png)

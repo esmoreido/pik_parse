@@ -5,26 +5,9 @@ date: '8 сентября 2020 г '
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Скачать срочные (3 ч) данные (T, R, Td) с метеостанций в России и мире теперь проще
+Все, что вам нужно - номера метеостанций и даты. Если в архиве ("Погоды и климата")[http://pogodaiklimat.ru] есть информация по этим станциям за эти даты, вы получите xlsx файлы со срочными и суточными значениями. 
 
-## R Markdown
+## Пример 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+![pik_boxplot_2020.png](pik_boxplot_2020.png)
